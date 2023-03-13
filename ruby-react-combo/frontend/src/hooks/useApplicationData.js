@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+
 export default function useApplicationData(props) {
   //local data structure-----------------------------------
   const [state, setState] = useState({

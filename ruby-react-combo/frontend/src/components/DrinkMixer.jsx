@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import useApplicationData from "../hooks/useApplicationData";
 const first_ingredient = 2;
+const first_ing_array = [1,2,3,600,601];
 
 export default function DrinkMixer(){
   const {state} = useApplicationData();
@@ -33,13 +34,26 @@ export default function DrinkMixer(){
    
    const ingredientlist = mixdata.available_ingredient_list.map(it=>{
        const ing = state.ingredients.filter(item=>item.id==it);
-       console.log("..........",ing[0]);
+       //console.log("..........",ing[0]);
      return (
         <li key={ing[0].id}>
           <p>==={ing[0].name}===</p>
         </li>
       )
      })
+
+    //  const first_ing_array_list = first_ing_array.map(it=>{
+    //   const ing1 = state.ingredients.filter(item=>item.id==it);
+    //   console.log(".......",ing1[0]);
+    //   return (
+    //     <li key={ing1[0].id}>
+    //       <p>==={ing1[0].name}===</p>
+         
+    //     </li>
+    //   )
+    //  })
+
+       
 
 
 //   function handleIngredientSelect(id) {
@@ -89,9 +103,22 @@ export default function DrinkMixer(){
 
   return (
     <div>
+      <h2>Start from here?</h2>
+      <ul>
+      {first_ing_array_list}
+      </ul>
+
       <h2>available drink</h2>
       <ul>
       {drinklist}
+      </ul>
+      <h2>available ingredients</h2>
+      <ul>
+      {ingredientlist}
+      </ul>
+      <h2>available ingredients</h2>
+      <ul>
+      {ingredientlist}
       </ul>
       <h2>available ingredients</h2>
       <ul>
