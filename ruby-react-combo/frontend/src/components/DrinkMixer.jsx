@@ -42,6 +42,7 @@ export default function DrinkMixer(){
      return (
         <li key={ing[0].id}>
           <p>==={ing[0].name}===</p>
+          <img src ={"http://"+`${ing[0].image_s}`}></img>
         </li>
       )
      })
@@ -67,6 +68,7 @@ export default function DrinkMixer(){
          return( 
          <li key={ing[0].id}>
            <p>==={ing[0].name}===</p>
+           <img src ={"http://"+`${ing[0].image_s}`}></img>
          </li>)
        }
        
